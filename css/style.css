@@ -1,0 +1,29 @@
+html{
+	background-color:#eef;
+}
+
+header {
+	background-color:#264460;
+}
+
+header a {
+	padding: 0 15px;
+	text-decoration:none;
+	color:#dde;
+}
+
+nav {
+   background-color:#466480;
+}
+
+#contact_list {
+   text-decoration:none;
+}
+
+main {
+	padding: .5em;
+}
+
+a:focus{
+	color:red;
+}
