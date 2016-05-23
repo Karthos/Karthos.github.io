@@ -26,6 +26,12 @@ a:focus{
 }
 
 
+section {
+   float:left;
+   width: 340px;
+   margin: 10px;
+}
+
 /* Contact page */
 
 #contact-list a {
@@ -38,15 +44,15 @@ a:focus{
 }
 
 
-/* Experiment page */
 
-section p{
-   float:left;
-   width: 340px;
-}
+
+
+
 
 
 /* Calculator experiment  */
+
+
 
 #calculator {
 	background-color: #999;
@@ -56,7 +62,8 @@ section p{
 	margin: 10px auto;
 	padding: 5px;
 	border-radius: 10px;
-   float:left;
+   float:right;
+
 }
 
 #total {
