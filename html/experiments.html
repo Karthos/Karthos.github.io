@@ -2,9 +2,15 @@
 <html>
 	<head>
 		<title>Experiments - ExQ</title>
+      
+      <meta charset="UTF-8" />
+      
 		<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		
+      
+      <script src="../js/jquery-1.12.4.min.js"></script>
+		<script src="../js/script.js"></script>
+      
 	</head>
 	<body>
 		
@@ -21,9 +27,34 @@
 		</header>
 		
 		<main>
-			<p>To be filled in at a later time</p>
-			<div id = "calculator"></div>
+         <section>
+            <p>Javascript calculator pulled from one of Codecademy's tutorials. Uses jQuery to well... make a calculator. Looking at my js file, I'll probably need to figure how to make it more adequately accommodate more experiments. Maybe separate js files for each project?</p> 
+            <div id="calculator">
+            <div id="total"></div>
+               <div id="operators">
+                  <a>+</a>
+                  <a>-</a>
+                  <a>/</a>
+                  <a>*</a>
+                  <a>=</a>
+               </div>
+               <div id="numbers">
+                  <a>1</a>
+                  <a>2</a>
+                  <a>3</a>
+                  <a>4</a>
+                  <a>5</a>
+                  <a>6</a>
+                  <a>7</a>
+                  <a>8</a>
+                  <a>9</a>
+                  <a id="clear">C</a>
+                  <a>0</a>
+                  <a id="clearall">AC</a>
+               </div>
+            </div>
+         </section>
 		</main>
 	</body>
-   <script src="../js/script.js"></script>
+
 </html>
