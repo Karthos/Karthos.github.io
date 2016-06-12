@@ -1,0 +1,114 @@
+/* Set the min/max widths of the webpage */
+
+body {
+   min-width: 600px;
+   max-width: 1000px;
+}
+
+
+/* Make the header look pretty */
+
+header{
+   padding: 0px 20px;
+
+
+   background: #AAA url("reel.jpg") right/contain no-repeat;
+   
+   
+   /* makes a gray-white gradient from left to right */
+   background: url("reel.jpg") right/contain no-repeat,
+               -webkit-linear-gradient(left, gray, gray, white, white); /* For Safari 5.1 to 6.0 */
+   background: url("reel.jpg") right/contain no-repeat
+               -o-linear-gradient(left, gray, gray, white, white); /* For Opera 11.1 to 12.0 */
+   background: url("reel.jpg") right/contain no-repeat
+               -moz-linear-gradient(left, gray, gray, white, white); /* For Firefox 3.6 to 15 */
+   background: url("reel.jpg") right/contain no-repeat
+               linear-gradient(left, gray, gray, white, white);
+               
+   /* unnecessarily redundant use of "url("reel.jpg") right/contain no-repeat," ? */
+}
+
+/* Remove the ugly default link styling */
+.logo a, nav a{
+   color:white;
+   text-decoration:none;
+}
+
+
+/* Nav link styling */
+nav ul{
+   padding-left:0px;
+}
+
+nav li{
+   list-style:none;
+   display:inline-block;
+   padding: 0px 5px;
+   
+}
+
+/* Main content styling */
+
+main section{
+   float:left;
+   width:45%;
+   padding:20px;
+}
+
+main p:first-letter{
+   font-size: 2em;
+   font-weight:bold;
+}
+
+
+/* styling for the artwork and trailer */
+.media {
+   float:right;
+   width:45%;
+   padding:20px;
+   
+}
+
+.media * {
+   float:right;
+}
+
+img{
+   max-width:300px;
+   border-radius: 10px;
+}
+
+iframe{
+   max-width:300px;
+}
+
+
+/* styling for the reviews */
+.reviews, .reviews li{
+   width:100%;
+   clear:both;
+   float:left;
+}
+
+.reviews ul{
+   padding-left:15px;
+}
+
+.reviews li{
+   list-style:none;
+   padding:10px 0px;
+   
+}
+
+.reviews li::first-letter{
+   font-size: 1.5em;
+   font-weight:bold;
+}
+
+.reviews li::before{
+   content:url("userpic.png");
+   float:left;
+   padding-right: 10px;
+}
+
+

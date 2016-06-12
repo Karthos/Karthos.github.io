@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!--
+      Final Project
+      
+      Home Page
+      
+      Names: Joshua Criswell, Alexander Martinez, Jordan Bothwell, Daniel Bearden
+      
+      Date: 6/10/2016
+      
+      Purpose: Design a website from scratch that has 4 different web pages, a main page, and 3 pages that show case the top movies for the month.
+      
+      -->
+      <meta charset="UTF-8" />
+      <title>Movies of the Month</title>
+      
+      <link href="movie-styles.css" rel="stylesheet" />
+      
+      
+      <!-- crude script for adding review comments and an average rating -->
+      <script>
+         var average = 0;
+         var total = 0;
+         var count = 0;
+         function reviewSubmit() {
+            var reviewText = document.getElementById("formText").value;
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(reviewText);
+            node.appendChild(textnode);
+            
+            document.getElementById("movie1Reviews").appendChild(node);
+            document.getElementById("formText").value = "";
+            
+            var i = document.getElementById("reviewRating").options;
+            total += parseInt(i[i.selectedIndex].value);
+            count++;
+            average = total/count;
+            
+            // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
+            document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+         }
+      </script>
+      
+   </head>
+   <body>
+      <header>
+         <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
+         <nav>
+            <ul>
+               <li><a href="">Movie 1</a></li>
+               <li><a href="">Movie 2</a></li>
+               <li><a href="">Movie 3</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         
+         <section>
+            <h2>Movie 1</h2>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla euismod dolor, vel cursus leo volutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, vitae pharetra nunc. Maecenas at tellus lectus. Maecenas et libero a quam cursus ullamcorper. Morbi quam diam, laoreet eu lorem et, laoreet vehicula erat. Fusce ac venenatis nisl. Vivamus et massa magna.
+            </p>
+         </section>
+         <section class="media">
+            <img src="singingrain.jpeg"/>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D1ZYhVpdXbQ" frameborder="0" allowfullscreen></iframe>
+         </section>
+         <section class="reviews">
+            <ul id="movie1Reviews">
+               <li>
+                  olutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, 
+               </li>
+            </ul>
+            <form>
+               <textarea id="formText" rows="3" cols="100" placeholder="Write your review here!"></textarea>
+               <br />
+               Rating:
+               <select id="reviewRating">
+                  <option value=1>*</option>
+                  <option value=2>**</option>
+                  <option value=3>***</option>
+                  <option value=4>****</option>
+                  <option value=5>*****</option>
+               </select>
+               <br />
+               
+               <!-- button runs the above script -->
+               <button type="button" onclick="reviewSubmit()">Submit</button>
+                  
+            </form>
+         </section>
+         
+         
+      </main>
+   </body>
+</html>
