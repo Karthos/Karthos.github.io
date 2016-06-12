@@ -47,6 +47,43 @@ nav li{
    
 }
 
+
+/* Home page paragraph styling */
+#MotmHome {	
+   background-color: rgb(0, 0, 0);	
+   background-color: rgba(204, 204, 204, 0.3);	
+   background-image: url(theater.jpg);	
+   background-position: right;	
+   background-repeat: no-repeat;		
+   -o-background-size: 40%;	
+   -moz-background-size: 40%;	
+   -webkit-background-size: 40%;	
+   background-size: 40%;		
+   -moz-border-radius: 30px;	
+   -webkit-border-radius: 30px;	
+   border-radius: 30px;		
+   clear: left;	
+   float: left;	
+   margin-left: 33%;	
+   width: 40%;
+}
+
+#MotmHome h1 {	
+   font-family: "Lucida Calligraphy", "Apple Chancery", cursive;	
+   font-size: 158%;	
+   font-weight: bold;	
+   margin: 10px 0px 0px 10px;
+}
+
+#MotmHome h2 {	font-size: 105%;	
+   margin: 0px 0px 10px 15px;
+}
+
+#MotmHome p {	
+   font-size: 87.5%;	
+   margin: 0px 40% 19px 15px;
+}
+   
 /* Main content styling */
 
 main section{

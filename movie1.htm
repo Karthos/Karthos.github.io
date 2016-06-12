@@ -24,22 +24,25 @@
          var average = 0;
          var total = 0;
          var count = 0;
+         var whitespaceMatch = new RegExp("^\\s*$");
          function reviewSubmit() {
-            var reviewText = document.getElementById("formText").value;
-            var node = document.createElement("LI");
-            var textnode = document.createTextNode(reviewText);
-            node.appendChild(textnode);
-            
-            document.getElementById("movie1Reviews").appendChild(node);
-            document.getElementById("formText").value = "";
-            
-            var i = document.getElementById("reviewRating").options;
-            total += parseInt(i[i.selectedIndex].value);
-            count++;
-            average = total/count;
-            
-            // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
-            document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+            if (!whitespaceMatch.test(document.getElementById("formText").value)){
+               var reviewText = document.getElementById("formText").value;
+               var node = document.createElement("LI");
+               var textnode = document.createTextNode(reviewText);
+               node.appendChild(textnode);
+               
+               document.getElementById("movie1Reviews").appendChild(node);
+               document.getElementById("formText").value = "";
+               
+               var i = document.getElementById("reviewRating").options;
+               total += parseInt(i[i.selectedIndex].value);
+               count++;
+               average = total/count;
+               
+               // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
+               document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+            }
          }
       </script>
       
@@ -49,9 +52,9 @@
          <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
          <nav>
             <ul>
-               <li><a href="">Movie 1</a></li>
-               <li><a href="">Movie 2</a></li>
-               <li><a href="">Movie 3</a></li>
+               <li><a href="movie1.htm">Movie 1</a></li>
+               <li><a href="movie2.htm">Movie 2</a></li>
+               <li><a href="movie3.htm">Movie 3</a></li>
             </ul>
          </nav>
       </header>
