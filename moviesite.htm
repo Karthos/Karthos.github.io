@@ -17,18 +17,19 @@
       <title>Movies of the Month</title>
       
       <link href="movie-styles.css" rel="stylesheet" />
+      <script src="modernizr-1.5.js"></script>
    
    </head>
    <body>
       <header>
-         <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
-         <nav>
-            <ul>
-               <li><a href="movie1.htm">Movie 1</a></li>
-               <li><a href="movie2.htm">Movie 2</a></li>
-               <li><a href="movie3.htm">Movie 3</a></li>
-            </ul>
-         </nav>
+         <img src="logo.png" usemap="#logomap" />
+         
+         <map name="logomap">
+            <area shape="rect" coords="2,7,101,34" href="moviesite.htm" />
+            <area shape="rect" coords="7,67,67,82" href="movie1.htm" />
+            <area shape="rect" coords="83,67,144,82" href="movie2.htm" />
+            <area shape="rect" coords="158,67,219,82" href="movie3.htm" />
+         </map>
       </header>
       <main>
          <section id="MotmHome">

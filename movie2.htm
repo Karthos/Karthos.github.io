@@ -15,15 +15,17 @@
       -->
       <meta charset="UTF-8" />
       <title>Movies of the Month</title>
-      
+	  
+      <script src="modernizr-1.5.js"></script>
       <link href="movie-styles.css" rel="stylesheet" />
+      <script src="modernizr-1.5.js"></script>
       
       
       <!-- crude script for adding review comments and an average rating -->
       <script>
-         var average = 0;
-         var total = 0;
-         var count = 0;
+         var average = 5;
+         var total = 5;
+         var count = 1;
          var whitespaceMatch = new RegExp("^\\s*$");
          function reviewSubmit() {
             if (!whitespaceMatch.test(document.getElementById("formText").value)){
@@ -32,7 +34,7 @@
                var textnode = document.createTextNode(reviewText);
                node.appendChild(textnode);
                
-               document.getElementById("movie1Reviews").appendChild(node);
+               document.getElementById("casablancaReviews").appendChild(node);
                document.getElementById("formText").value = "";
                
                var i = document.getElementById("reviewRating").options;
@@ -40,8 +42,8 @@
                count++;
                average = total/count;
                
-               // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
-               document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+               
+               document.getElementById("casablancaHeading").innerHTML = "Casablanca - " + average.toFixed(1) + "/5";
             } else {
                alert("Please enter some text for your review");
             }
@@ -51,33 +53,132 @@
    </head>
    <body>
       <header>
-         <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
-         <nav>
-            <ul>
-               <li><a href="movie1.htm">Movie 1</a></li>
-               <li><a href="movie2.htm">Movie 2</a></li>
-               <li><a href="movie3.htm">Movie 3</a></li>
-            </ul>
-         </nav>
+         <img src="logo.png" usemap="#logomap" />
+         
+         <map name="logomap">
+            <area shape="rect" coords="2,7,101,34" href="moviesite.htm" />
+            <area shape="rect" coords="7,67,67,82" href="movie1.htm" />
+            <area shape="rect" coords="83,67,144,82" href="movie2.htm" />
+            <area shape="rect" coords="158,67,219,82" href="movie3.htm" />
+         </map>
+         
       </header>
       <main>
          
          <section>
-            <h2>Movie 2</h2>
+            <h2><a id="casablancaHeading"href="http://www.imdb.com/title/tt0034583/?ref_=nv_sr_1" target="_blank">Casablanca - 5/5</a></h2>
+            <a href="#casablancaCast">Cast</a>
+            <a href="#casablancaReviews">Reviews</a>
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla euismod dolor, vel cursus leo volutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, vitae pharetra nunc. Maecenas at tellus lectus. Maecenas et libero a quam cursus ullamcorper. Morbi quam diam, laoreet eu lorem et, laoreet vehicula erat. Fusce ac venenatis nisl. Vivamus et massa magna.
+               Casablanca has been hailed as a masterpiece of cinema since it first appeared
+			  on the silver screen.  Featuring powerhouse actors Humphrey Bogart and Ingrid 
+			  Bergman and set in Casablanca, Morocco in the year of 1941 the film centers around 
+			  character Rick Blaine (Bogart).  Rick owns a popular nightclub in town, and while
+			  the French still maintain control they answer to the Third Reich.  Trouble finds 
+			  Rick in the form of two letters of transit, which would allow anyone to get out of
+			  Nazi occupied territory, and an old lover by the name of Ilsa(Bergman).  Ilsa is married
+			  to a resistance leader who needs to get out of the country, but the Nazis have him under
+			  their watch constantly.  As Rick tries to stay out of the situation he finds himself drawn
+			  deeper into it.  Plagued by memories, nazis, police, and his conscience there's no shortage 
+			  of intrigue as one man caught in the middle tries to maintain his neutrality.
             </p>
+            
+            <table class="cast" id="casablancaCast"/>
+         
+               <colgroup>
+                  <col class="actorCol" />
+                  <col class="charCol"/>
+                  <col class="headCol"/>
+               </colgroup>
+               
+               <tr>
+                  <th>Actors</th>
+                  <th>Character</th>
+                  <th>Picture</th>
+               </tr>
+               
+               <tbody valign="center">
+               <tr>
+                  <td>Humphrey Bogart</td>
+                  <td>Rick Blaine</td>
+                  <td><img src="actors/casablanca/bogart.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Ingrid Bergman</td>
+                  <td>Ilsa Lund</td>
+                  <td><img src="actors/casablanca/bergman.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Paul Henreid</td>
+                  <td>Victor Laszlo</td>
+                  <td><img src="actors/casablanca/henreid.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Claude Rains</td>
+                  <td>Captain Louis Renault</td>
+                  <td><img src="actors/casablanca/rains.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Conrad Veidt</td>
+                  <td>Major Heinrich Strasser</td>
+                  <td><img src="actors/casablanca/veidt.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Sydney Greenstreet</td>
+                  <td>Signor Ferrari</td>
+                  <td><img src="actors/casablanca/green.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Peter Lorre</td>
+                  <td>Ugarte</td>
+                  <td><img src="actors/casablanca/lorre.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>S.Z. Sakall</td>
+                  <td>Carl</td>
+                  <td><img src="actors/casablanca/sakall.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Madeleine Lebeau</td>
+                  <td>Yvonne</td>
+                  <td><img src="actors/casablanca/lebeau.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Dooley Wilson</td>
+                  <td>Sam</td>
+                  <td><img src="actors/casablanca/wilson.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Joy Page</td>
+                  <td>Annina Brandel</td>
+                  <td><img src="actors/casablanca/page.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>John Qualen</td>
+                  <td>Berger</td>
+                  <td><img src="actors/casablanca/qualen.jpg"/></td>
+               </tr>
+                        
+            </table>
          </section>
          <section class="media">
             <img src="casablanca.jpeg"/>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/a2MnKebNlRo" frameborder="0" allowfullscreen></iframe>
          </section>
+		 
+		 
+			
          <section class="reviews">
-            <ul id="movie1Reviews">
+            <ul id="casablancaReviews">
                <li>
-                  olutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, 
+                  This has always been a classic in my books.  Humphrey Bogart is just such a fantastic actor and 
+				  the film is full of memorable moments andlines.  Who can forget "Louie, I think this is the beginning of a beautiful friendship"
+				  or "here's looking at you kid".  And you gotta love Peter Lorre, he makes such a perfect weasely character in everything
+				  he does.
                </li>
             </ul>
+			
+			
             <form>
                <textarea id="formText" rows="3" cols="100" placeholder="Write your review here!"></textarea>
                <br />

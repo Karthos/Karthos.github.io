@@ -17,13 +17,13 @@
       <title>Movies of the Month</title>
       
       <link href="movie-styles.css" rel="stylesheet" />
-      
+      <script src="modernizr-1.5.js"></script>
       
       <!-- crude script for adding review comments and an average rating -->
       <script>
-         var average = 0;
-         var total = 0;
-         var count = 0;
+         var average = 5;
+         var total = 5;
+         var count = 1;
          var whitespaceMatch = new RegExp("^\\s*$");
          function reviewSubmit() {
             if (!whitespaceMatch.test(document.getElementById("formText").value)){
@@ -32,7 +32,7 @@
                var textnode = document.createTextNode(reviewText);
                node.appendChild(textnode);
                
-               document.getElementById("movie1Reviews").appendChild(node);
+               document.getElementById("singingRainReviews").appendChild(node);
                document.getElementById("formText").value = "";
                
                var i = document.getElementById("reviewRating").options;
@@ -40,8 +40,8 @@
                count++;
                average = total/count;
                
-               // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
-               document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+               
+               document.getElementById("singingRainHeading").innerHTML = "Singin' in the Rain - " + average.toFixed(1) + "/5";
             } else {
                alert("Please enter some text for your review");
             }
@@ -51,31 +51,90 @@
    </head>
    <body>
       <header>
-         <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
-         <nav>
-            <ul>
-               <li><a href="movie1.htm">Movie 1</a></li>
-               <li><a href="movie2.htm">Movie 2</a></li>
-               <li><a href="movie3.htm">Movie 3</a></li>
-            </ul>
-         </nav>
+         <img src="logo.png" usemap="#logomap" />
+         
+         <map name="logomap">
+            <area shape="rect" coords="2,7,101,34" href="moviesite.htm" />
+            <area shape="rect" coords="7,67,67,82" href="movie1.htm" />
+            <area shape="rect" coords="83,67,144,82" href="movie2.htm" />
+            <area shape="rect" coords="158,67,219,82" href="movie3.htm" />
+         </map>
       </header>
       <main>
          
          <section>
-            <h2>Movie 1</h2>
+            <h2><a id="singingRainHeading" href="http://www.imdb.com/title/tt0045152/?ref_=ttpl_pl_tt" target="_blank">Singin' in the Rain - 5/5</a></h2>
+            <a href="#singingRainCast">Cast</a>
+            <a href="#singingRainReviews">Reviews</a>
             <p>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla euismod dolor, vel cursus leo volutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, vitae pharetra nunc. Maecenas at tellus lectus. Maecenas et libero a quam cursus ullamcorper. Morbi quam diam, laoreet eu lorem et, laoreet vehicula erat. Fusce ac venenatis nisl. Vivamus et massa magna.
             </p>
+            
+            <table class="cast" id="singingRainCast"/>
+         
+               <colgroup>
+                  <col class="actorCol" />
+                  <col class="charCol"/>
+                  <col class="headCol"/>
+               </colgroup>
+               
+               <tr>
+                  <th>Actors</th>
+                  <th>Character</th>
+                  <th>Picture</th>
+               </tr>
+               
+               <tbody valign="center">
+               <tr>
+                  <td>Gene Kelly</td>
+                  <td>Don Lockwood</td>
+                  <td><img src="actors/singingrain/kelly.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Donald O'Connor</td>
+                  <td>Cosmo Brown</td>
+                  <td><img src="actors/singingrain/oconnor.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Debbie Reynolds</td>
+                  <td>Kathy Selden</td>
+                  <td><img src="actors/singingrain/reynolds.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Jean Hagen</td>
+                  <td>Lina Lamont</td>
+                  <td><img src="actors/singingrain/hagen.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Millard Mitchell</td>
+                  <td>R.F. Simpson</td>
+                  <td><img src="actors/singingrain/mitchell.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Cyd Charisse</td>
+                  <td>Dancer</td>
+                  <td><img src="actors/singingrain/charisse.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Douglas Fowley</td>
+                  <td>Roscoe Dexter</td>
+                  <td><img src="actors/singingrain/fowley.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Rita Moreno</td>
+                  <td>Zelda Zanders</td>
+                  <td><img src="actors/singingrain/moreno.jpg"/></td>
+               </tr>
+            </table>
          </section>
          <section class="media">
             <img src="singingrain.jpeg"/>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/D1ZYhVpdXbQ" frameborder="0" allowfullscreen></iframe>
+            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/D1ZYhVpdXbQ" frameborder="0" allowfullscreen></iframe>-->
          </section>
          <section class="reviews">
-            <ul id="movie1Reviews">
+            <ul id="singingRainReviews">
                <li>
-                  olutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, 
+                  Singin' in the Rain has some of my all time favorite musical pieces. The titular song and "Good Morning" never fails to make me tap my foot.
                </li>
             </ul>
             <form>

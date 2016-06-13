@@ -16,6 +16,7 @@
       <title>Movies of the Month</title>
       
       <link href="movie-styles.css" rel="stylesheet" />
+      <script src="modernizr-1.5.js"></script>
       
       
       <!-- crude script for adding review comments and an average rating -->
@@ -31,7 +32,7 @@
                var textnode = document.createTextNode(reviewText);
                node.appendChild(textnode);
                
-               document.getElementById("movie1Reviews").appendChild(node);
+               document.getElementById("gwtwReviews").appendChild(node);
                document.getElementById("formText").value = "";
                
                var i = document.getElementById("reviewRating").options;
@@ -39,8 +40,8 @@
                count++;
                average = total/count;
                
-               // Needs to be changed for the relevant second heading <h2> when adding to the other movie pages
-               document.getElementsByTagName("H2")[0].innerHTML = "Movie 1 - " + average.toFixed(1) + "/5";
+              
+               document.getElementById("gwtwHeading").innerHTML = "Gone with the Wind - " + average.toFixed(1) + "/5";
             } else {
                alert("Please enter some text for your review");
             }
@@ -50,29 +51,109 @@
    </head>
    <body>
       <header>
-         <h1 class="logo"><a href="moviesite.htm">MotM</a></h1>
-         <nav>
-            <ul>
-               <li><a href="movie1.htm">Movie 1</a></li>
-               <li><a href="movie2.htm">Movie 2</a></li>
-               <li><a href="movie3.htm">Movie 3</a></li>
-            </ul>
-         </nav>
+         <img src="logo.png" usemap="#logomap" />
+         
+         <map name="logomap">
+            <area shape="rect" coords="2,7,101,34" href="moviesite.htm" />
+            <area shape="rect" coords="7,67,67,82" href="movie1.htm" />
+            <area shape="rect" coords="83,67,144,82" href="movie2.htm" />
+            <area shape="rect" coords="158,67,219,82" href="movie3.htm" />
+         </map>
       </header>
       <main>
          
          <section>
-            <h2>Movie 3</h2>
+            <h2><a id="gwtwHeading" href="http://www.imdb.com/title/tt0031381/?ref_=fn_al_tt_1" target="_blank">Gone with the Wind</a></h2>
+            <a href="#gwtwCast">Cast</a>
+            <a href="#gwtwReviews">Reviews</a>
             <p>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla euismod dolor, vel cursus leo volutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, vitae pharetra nunc. Maecenas at tellus lectus. Maecenas et libero a quam cursus ullamcorper. Morbi quam diam, laoreet eu lorem et, laoreet vehicula erat. Fusce ac venenatis nisl. Vivamus et massa magna.
             </p>
+            
+            <table class="cast" id="gwtwCast"/>
+         
+               <colgroup>
+                  <col class="actorCol" />
+                  <col class="charCol"/>
+                  <col class="headCol"/>
+               </colgroup>
+               
+               <tr>
+                  <th>Actors</th>
+                  <th>Character</th>
+                  <th>Picture</th>
+               </tr>
+               
+               <tbody valign="center">
+               <tr>
+                  <td>Humphrey Bogart</td>
+                  <td>Rick Blaine</td>
+                  <td><img src="actors/gwtw/bogart.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Ingrid Bergman</td>
+                  <td>Ilsa Lund</td>
+                  <td><img src="actors/gwtw/bergman.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Paul Henreid</td>
+                  <td>Victor Laszlo</td>
+                  <td><img src="actors/gwtw/henreid.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Claude Rains</td>
+                  <td>Captain Louis Renault</td>
+                  <td><img src="actors/gwtw/rains.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Conrad Veidt</td>
+                  <td>Major Heinrich Strasser</td>
+                  <td><img src="actors/gwtw/veidt.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Sydney Greenstreet</td>
+                  <td>Signor Ferrari</td>
+                  <td><img src="actors/gwtw/green.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Peter Lorre</td>
+                  <td>Ugarte</td>
+                  <td><img src="actors/gwtw/lorre.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>S.Z. Sakall</td>
+                  <td>Carl</td>
+                  <td><img src="actors/gwtw/sakall.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Madeleine Lebeau</td>
+                  <td>Yvonne</td>
+                  <td><img src="actors/gwtw/lebeau.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Dooley Wilson</td>
+                  <td>Sam</td>
+                  <td><img src="actors/gwtw/wilson.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>Joy Page</td>
+                  <td>Annina Brandel</td>
+                  <td><img src="actors/gwtw/page.jpg"/></td>
+               </tr>
+               <tr>
+                  <td>John Qualen</td>
+                  <td>Berger</td>
+                  <td><img src="actors/gwtw/qualen.jpg"/></td>
+               </tr>
+                        
+            </table>
          </section>
          <section class="media">
             <img width="300" src="GWTW.jpg"/>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/0dTsfsr6-X8" frameborder="0" allowfullscreen></iframe>
          </section>
          <section class="reviews">
-            <ul id="movie1Reviews">
+            <ul id="gwtwReviews">
                <li>
                   olutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, 
                </li>

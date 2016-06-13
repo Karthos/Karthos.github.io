@@ -1,8 +1,15 @@
 /* Set the min/max widths of the webpage */
 
 body {
-   min-width: 600px;
+   min-width: 830px;
    max-width: 1000px;
+   background-image: url("cinema.jpg");	
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+*:not(table){
+   color:white;
 }
 
 
@@ -10,7 +17,7 @@ body {
 
 header{
    padding: 0px 20px;
-
+   
 
    background: #AAA url("reel.jpg") right/contain no-repeat;
    
@@ -29,24 +36,21 @@ header{
 }
 
 /* Remove the ugly default link styling */
-.logo a, nav a{
-   color:white;
+
+
+header img{
+   height:85px;
+   max-width:none;
+   border-radius:0px;
+}
+
+/* Link styling */
+a {
+   /*color:black;*/
    text-decoration:none;
-}
-
-
-/* Nav link styling */
-nav ul{
-   padding-left:0px;
-}
-
-nav li{
-   list-style:none;
-   display:inline-block;
-   padding: 0px 5px;
+   border-bottom:1px solid;
    
 }
-
 
 /* Home page paragraph styling */
 #MotmHome {	
@@ -120,6 +124,27 @@ iframe{
    max-width:300px;
 }
 
+/* styling for Cast table */
+table.cast {	
+   width: 400px;	
+   padding: 0px;	
+   text-align: center;
+}
+
+table.cast col.actorCol {	
+   background-color: rgb(192,192,192);	
+   width: 10%;
+}
+
+table.cast col.charCol {	
+   background-color: rgb(192,192,192);	
+   width: 10%;
+}
+
+table.cast col.headCol {	
+   background-color: rgb(192,192,192);	
+   width: 10%;
+}
 
 /* styling for the reviews */
 .reviews, .reviews li{
