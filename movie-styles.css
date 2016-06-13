@@ -1,7 +1,6 @@
 
 body {
    min-width: 830px;
-   /*max-width: 1000px;*/
    background-image: url("cinema.jpg");	
    background-size: cover;
    background-repeat: no-repeat;
@@ -22,13 +21,13 @@ header{
    
    
    /* makes a gray-white gradient from left to right */
-   background: url("reel.jpg") right/contain no-repeat,
+   background: url("reel.jpg") right/contain no-repeat, 
                -webkit-linear-gradient(left, gray, gray, white, white); /* For Safari 5.1 to 6.0 */
-   background: url("reel.jpg") right/contain no-repeat
+   background: url("reel.jpg") right/contain no-repeat, 
                -o-linear-gradient(left, gray, gray, white, white); /* For Opera 11.1 to 12.0 */
-   background: url("reel.jpg") right/contain no-repeat
+   background: url("reel.jpg") right/contain no-repeat, 
                -moz-linear-gradient(left, gray, gray, white, white); /* For Firefox 3.6 to 15 */
-   background: url("reel.jpg") right/contain no-repeat
+   background: url("reel.jpg") right/contain no-repeat,
                linear-gradient(left, gray, gray, white, white);
                
    /* unnecessarily redundant use of "url("reel.jpg") right/contain no-repeat," ? */
@@ -39,7 +38,6 @@ header{
 
 header img{
    height:85px;
-   /*max-width:none;*/
    border-radius:0px;
 }
 
@@ -91,7 +89,7 @@ a {
 /* Main content styling */
 
 main{
-   width:80%;
+   width:65%;
    margin:auto;
 }
 
@@ -128,7 +126,7 @@ img{
 iframe{
    max-width:300px;
    index: -1;
-   position:relative;}
+   position:relative;
 }
 
 /* styling for Cast table */
@@ -150,7 +148,7 @@ table.cast col.charCol {
 
 table.cast col.headCol {	
    background-color: rgb(192,192,192);	
-   width: 10%;
+   width: 5%;
 }
 
 /* styling for the reviews */
