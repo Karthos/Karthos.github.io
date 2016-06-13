@@ -2,7 +2,7 @@
 
 body {
    min-width: 830px;
-   max-width: 1000px;
+   /*max-width: 1000px;*/
    background-image: url("cinema.jpg");	
    background-size: cover;
    background-repeat: no-repeat;
@@ -40,13 +40,13 @@ header{
 
 header img{
    height:85px;
-   max-width:none;
+   /*max-width:none;*/
    border-radius:0px;
 }
 
 /* Link styling */
 a {
-   color:white;
+   color:#DDD;
    text-decoration:none;
    border-bottom:1px solid;
    
