@@ -109,7 +109,7 @@ main p:first-letter{
 
 /* styling for the artwork and trailer */
 .media {
-   float:right;
+   float:left;
    width:45%;
    padding:20px;
    
@@ -155,7 +155,7 @@ table.cast col.headCol {
 
 /* styling for the reviews */
 .reviews, .reviews li{
-   width:100%;
+   width:inherit;
    clear:both;
    float:left;
 }
