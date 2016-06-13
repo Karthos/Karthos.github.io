@@ -8,8 +8,8 @@ body {
    background-repeat: no-repeat;
 }
 
-*:not(table){
-   color:white;
+p, li, form:not(button){
+   color:#DDD;
 }
 
 
@@ -46,7 +46,7 @@ header img{
 
 /* Link styling */
 a {
-   /*color:black;*/
+   color:white;
    text-decoration:none;
    border-bottom:1px solid;
    
@@ -122,6 +122,8 @@ img{
 
 iframe{
    max-width:300px;
+   index: -1;
+   position:relative;}
 }
 
 /* styling for Cast table */
