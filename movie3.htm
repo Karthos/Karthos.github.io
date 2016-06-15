@@ -21,9 +21,9 @@
       
       <!-- crude script for adding review comments and an average rating -->
       <script>
-         var average = 0;
-         var total = 0;
-         var count = 0;
+         var average = 4;
+         var total = 4;
+         var count = 1;
          var whitespaceMatch = new RegExp("^\\s*$");
          function reviewSubmit() {
             if (!whitespaceMatch.test(document.getElementById("formText").value)){
@@ -63,11 +63,17 @@
       <main>
          
          <section>
-            <h2><a id="gwtwHeading" href="http://www.imdb.com/title/tt0031381/?ref_=fn_al_tt_1" target="_blank">Gone with the Wind</a></h2>
+            <h2><a id="gwtwHeading" href="http://www.imdb.com/title/tt0031381/?ref_=fn_al_tt_1" target="_blank">Gone with the Wind - 4/5</a></h2>
             <a href="#gwtwCast">Cast</a>
             <a href="#gwtwReviews">Reviews</a>
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla euismod dolor, vel cursus leo volutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, vitae pharetra nunc. Maecenas at tellus lectus. Maecenas et libero a quam cursus ullamcorper. Morbi quam diam, laoreet eu lorem et, laoreet vehicula erat. Fusce ac venenatis nisl. Vivamus et massa magna.
+                This masterpiece of American cinema from director Victor Fleming and writer Margaret Mitchell is a tale of life 
+				in the old South.  Scarlett O'hara, played by Vivien Leigh, comes from a prominent southern family.  Life is good for her, 
+				except she cannot have the man she wants.  Follow Scarlett through her trials and tribulations through war, destruction of her family home,
+				post war reconstruction, and marriage to Rhett Butler, played by Clark Gable, one of the most famous faces of the silver screen.  Enduring all
+				sorts of hardships, even the burning of Atlanta, Scarlett will never give up in pursuit of the life she wants.  
+				Winner of 10 academy awards complimented by a renowned soundtrack, this classic is one you're sure to love.  Now fully remastered in color,
+				be sure to see Gone With The Wind before it's gone from the screens.
             </p>
             
             <table class="cast" id="gwtwCast">
@@ -86,64 +92,74 @@
                
                <tbody valign="center">
                <tr>
-                  <td>Humphrey Bogart</td>
-                  <td>Rick Blaine</td>
-                  <td><img src="actors/gwtw/bogart.jpg"/></td>
+                  <td>Thomas Mitchell</td>
+                  <td>Gerald O'hara</td>
+                  <td><img src="actors/gwtw/mitchell.jpg"/></td>
                </tr>
                <tr>
-                  <td>Ingrid Bergman</td>
-                  <td>Ilsa Lund</td>
-                  <td><img src="actors/gwtw/bergman.jpg"/></td>
+                  <td>Barbara O'Neill</td>
+                  <td>Ellen O'hara</td>
+                  <td><img src="actors/gwtw/oneil.jpg"/></td>
                </tr>
                <tr>
-                  <td>Paul Henreid</td>
-                  <td>Victor Laszlo</td>
-                  <td><img src="actors/gwtw/henreid.jpg"/></td>
+                  <td>Vivien Leigh</td>
+                  <td>Scarlett O'hara</td>
+                  <td><img src="actors/gwtw/leigh.jpg"/></td>
                </tr>
                <tr>
-                  <td>Claude Rains</td>
-                  <td>Captain Louis Renault</td>
-                  <td><img src="actors/gwtw/rains.jpg"/></td>
+                  <td>Evelyn Keyes</td>
+                  <td>Suellen O'hara</td>
+                  <td><img src="actors/gwtw/keyes.jpg"/></td>
                </tr>
                <tr>
-                  <td>Conrad Veidt</td>
-                  <td>Major Heinrich Strasser</td>
-                  <td><img src="actors/gwtw/veidt.jpg"/></td>
+                  <td>Ann Rutherford</td>
+                  <td>Carreen O'hara</td>
+                  <td><img src="actors/gwtw/rutherford.jpg"/></td>
                </tr>
                <tr>
-                  <td>Sydney Greenstreet</td>
-                  <td>Signor Ferrari</td>
-                  <td><img src="actors/gwtw/green.jpg"/></td>
+                  <td>George Reeves</td>
+                  <td>Brent Tarleton</td>
+                  <td><img src="actors/gwtw/reeves.jpg"/></td>
                </tr>
                <tr>
-                  <td>Peter Lorre</td>
-                  <td>Ugarte</td>
-                  <td><img src="actors/gwtw/lorre.jpg"/></td>
+                  <td>Hattie McDaniel</td>
+                  <td>Mammy</td>
+                  <td><img src="actors/gwtw/McDaniel.jpg"/></td>
                </tr>
                <tr>
-                  <td>S.Z. Sakall</td>
-                  <td>Carl</td>
-                  <td><img src="actors/gwtw/sakall.jpg"/></td>
+                  <td>Butterfly McQueen</td>
+                  <td>Prissy</td>
+                  <td><img src="actors/gwtw/McQueen.jpg"/></td>
                </tr>
                <tr>
-                  <td>Madeleine Lebeau</td>
-                  <td>Yvonne</td>
-                  <td><img src="actors/gwtw/lebeau.jpg"/></td>
+                  <td>Victor Jory</td>
+                  <td>Jonas Wilkerson</td>
+                  <td><img src="actors/gwtw/jory.jpg"/></td>
                </tr>
                <tr>
-                  <td>Dooley Wilson</td>
-                  <td>Sam</td>
-                  <td><img src="actors/gwtw/wilson.jpg"/></td>
+                  <td>Leslie Howard</td>
+                  <td>Ashley</td>
+                  <td><img src="actors/gwtw/howard.jpg"/></td>
                </tr>
                <tr>
-                  <td>Joy Page</td>
-                  <td>Annina Brandel</td>
-                  <td><img src="actors/gwtw/page.jpg"/></td>
+                  <td>Olivia de Havilland</td>
+                  <td>Melanie Hamilton</td>
+                  <td><img src="actors/gwtw/havilland.jpg"/></td>
                </tr>
                <tr>
-                  <td>John Qualen</td>
-                  <td>Berger</td>
-                  <td><img src="actors/gwtw/qualen.jpg"/></td>
+                  <td>Rand Brooks</td>
+                  <td>Charles Hamilton</td>
+                  <td><img src="actors/gwtw/brooks.jpg"/></td>
+               </tr>
+			   <tr>
+                  <td>Clark Gable</td>
+                  <td>Rhett Butler</td>
+                  <td><img src="actors/gwtw/gable.jpg"/></td>
+               </tr>
+			   <tr>
+                  <td>Harry Davenport</td>
+                  <td>Dr. Meade</td>
+                  <td><img src="actors/gwtw/davenport.jpg"/></td>
                </tr>
                         
             </table>
@@ -155,7 +171,9 @@
          <section class="reviews">
             <ul id="gwtwReviews">
                <li>
-                  olutpat eget. Integer lectus risus, fermentum non lacinia a, ornare eget ipsum. Pellentesque consequat scelerisque neque nec semper. Integer posuere velit in accumsan blandit. Vestibulum non semper mauris. Pellentesque malesuada tellus vel sapien congue, sit amet lobortis velit elementum. Donec et mattis risus, 
+                  It's a long movie, really long, and there are definitely some boring parts.  But it's worth watching.
+				  The acting is fantastic on all parts, really good cinematography, and it provides an interesting look at
+				  the South before, during, and after the American civil war.  
                </li>
             </ul>
             <form>
@@ -179,5 +197,10 @@
          
          
       </main>
+      <footer>         
+         <p>            
+            Movies of the Month &#169;2016         
+         </p>      
+      </footer>
    </body>
 </html>
