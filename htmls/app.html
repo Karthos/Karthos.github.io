@@ -1,0 +1,67 @@
+<html>
+
+    <body>
+	<form>
+		<ul>
+			<li>
+			    <input type="checkbox" name="ingredient1" value="carrot" checked="false" onclick="toggle(this);">
+			    <label for="ingredient1">Carrot</label>
+			</li>
+
+			<li>
+			    <input type="checkbox" name="ingredient2" value="cheese" checked="false" onclick="toggle(this);">
+			    <label for="ingredient2">Cheese</label>
+			</li>
+			<li>
+			    <input type="checkbox" name="ingredient3" value="milk" checked="false" onclick="toggle(this);">
+			    <label for="ingredient3">Milk</label>
+			</li>
+		</ul>
+	</form>
+	<div>
+		<ul id="recipes">
+			<li>
+				<h2>Recipe One</h2>
+				<h3>Ingredients</h3>
+				<ul>
+					<li>Carrot</li>
+					<li>Milk</li>
+				</ul>
+			</li>
+			<li>
+				<h2>Recipe Two</h2>
+				<h3>Ingredients</h3>
+				<ul>
+					<li>Cheese</li>
+				</ul>
+			</li>
+			<li>
+				<h2>Recipe Three</h2>
+				<h3>Ingredients</h3>
+				<ul>
+					<li>Milk</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script>
+		var recipes = document.getElementById('recipes').children;
+		console.log(recipes);
+		function toggle(obj){
+			for(let recipe of recipes){
+				for(let ingredient of recipe.querySelector('ul').children){
+console.log(ingredient);
+console.log(obj.value);
+					if(ingredient.innerHTML.toLowerCase() == obj.value){
+						if(obj.checked){
+							recipe.style.visibility='hidden';
+						} else {
+							recipe.style.visibility='visible';
+						}
+					}
+				}
+			}
+		}
+	</script>
+    </body>
+</html>
